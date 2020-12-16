@@ -35,10 +35,14 @@ class Settings(BaseSettings):
     POSTGRES_USER: str = 'bonch'
     POSTGRES_PASSWORD: str = 'bonch'
 
-    RABBITMQ_LOGIN: str = 'guest'
-    RABBITMQ_PASSWORD: str = 'guest'
-    RABBITMQ_HOST: str = 'localhost'
-    RABBITMQ_PORT: int = 5672
+    REDIS_HOST: str = 'localhost'
+    REDIS_PORT: int = 6379
+    REDIS_PASSWORD: Optional[str] = None
+
+    AWS_ACCESS_KEY_ID: str
+    AWS_SECRET_ACCESS_KEY: str
+
+    CHROMIUM_PATH: str
 
     CORS_ORIGINS: List[AnyHttpUrl] = [
         'http://localhost',
@@ -71,7 +75,7 @@ class Settings(BaseSettings):
         host = self.POSTGRES_HOST
         port = self.POSTGRES_PORT
         user = self.POSTGRES_USER
-        password = self.RABBITMQ_PASSWORD
+        password = self.POSTGRES_PASSWORD
         name = self.POSTGRES_DB
 
         return f'postgres://{user}:{password}@{host}:{port}/{name}'

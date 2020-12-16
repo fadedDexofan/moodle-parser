@@ -15,6 +15,7 @@ class Test(BaseDBModel):
 
     class Meta:
         unique_together = ('test_id', 'domain')
+        indexes = ('test_id', 'domain')
 
     def __str__(self) -> str:
         return f'[{self.test_id}] {self.name}'
@@ -31,7 +32,7 @@ class Question(BaseDBModel):
     status = fields.CharEnumField(CompletionStatus)
 
     def __str__(self) -> str:
-        return f'[{self.status}] Вопрос {self.question_id}'
+        return f'[{self.status}] Question {self.question_id}'
 
 
 Tortoise.init_models(['app.applications.tests.models'], 'models')

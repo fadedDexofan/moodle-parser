@@ -1,10 +1,11 @@
 import logging
 
-from fastapi import APIRouter, BackgroundTasks, HTTPException
+from fastapi import APIRouter
+from starlette.background import BackgroundTasks
 
-from app.applications.tests.dto import TestParseRequest
+from app.applications.tests.dto import TestParseRequest, TestSearchRequest
 from app.applications.tests.models import Test, Test_Pydantic
-from app.applications.tests.services import get_test_by_id, parse_test_into_db
+from app.applications.tests.services import enqueue_parse_task, search_test_by_request
 
 logger = logging.getLogger(__name__)
 
@@ -16,18 +17,13 @@ async def parse_test(
     parse_request: TestParseRequest,
     background_tasks: BackgroundTasks,
 ):
-    background_tasks.add_task(parse_test_into_db, parse_request=parse_request)
+    background_tasks.add_task(enqueue_parse_task, parse_request)
     return {}
 
 
-@router.get('/{test_id}', response_model=Test_Pydantic, status_code=200, tags=['tests'])
-async def read_test_by_id(test_id: int):
-    test = await get_test_by_id(test_id)
-    if not test:
-        raise HTTPException(
-            status_code=404,
-            detail='Тест с указанным ID не найден',
-        )
+@router.post('/search', response_model=Test_Pydantic, status_code=200, tags=['tests'])
+async def search_test(search_request: TestSearchRequest):
+    test = await search_test_by_request(search_request)
     return await Test_Pydantic.from_tortoise_orm(test)
 
 

@@ -9,12 +9,10 @@ services:
       - ./etc/postgres_data:/var/lib/postgresql/data
     env_file: ./.env
 
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
+  redis:
+    image: "redis:latest"
     restart: unless-stopped
-    expose:
-      - "5672"
     ports:
-      - "5672:5672"
+      - "6379:6379"
     volumes:
-      - ./etc/rabbitmqdata:/var/lib/rabbitmq
+      - ./etc/redis_data:/data
