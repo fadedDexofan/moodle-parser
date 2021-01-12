@@ -18,25 +18,31 @@ configure_logging()
 if settings.SENTRY_DSN:
     sentry_sdk.init(settings.SENTRY_DSN)
 
-app = FastAPI(
-    title=settings.APP_TITLE,
-    version=settings.VERSION,
-    debug=settings.DEBUG,
-)
 
-configure_logging()
-init_middlewares(app)
-register_db(app)
-register_exceptions(app)
-register_routers(app)
+def create_app() -> FastAPI:
+    app = FastAPI(
+        title=settings.APP_TITLE,
+        version=settings.VERSION,
+        debug=settings.DEBUG,
+    )
+
+    configure_logging()
+    init_middlewares(app)
+    register_db(app)
+    register_exceptions(app)
+    register_routers(app)
+
+    return app
+
 
 if __name__ == '__main__':
     uvicorn.run(
-        app='main:app',
+        app='main:create_app',
         loop='uvloop',
         http='httptools',
         host=settings.HOST,
         port=settings.PORT,
         workers=settings.WORKERS,
         reload=True,
+        factory=True,
     )

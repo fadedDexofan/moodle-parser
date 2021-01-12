@@ -352,7 +352,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "fastapi"
-version = "0.62.0"
+version = "0.63.0"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 category = "main"
 optional = false
@@ -363,10 +363,10 @@ pydantic = ">=1.0.0,<2.0.0"
 starlette = "0.13.6"
 
 [package.extras]
-all = ["requests (>=2.24.0,<3.0.0)", "aiofiles (>=0.5.0,<0.6.0)", "jinja2 (>=2.11.2,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "itsdangerous (>=1.1.0,<2.0.0)", "pyyaml (>=5.3.1,<6.0.0)", "graphene (>=2.1.8,<3.0.0)", "ujson (>=3.0.0,<4.0.0)", "orjson (>=3.2.1,<4.0.0)", "email_validator (>=1.1.1,<2.0.0)", "uvicorn (>=0.11.5,<0.12.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)"]
-dev = ["python-jose[cryptography] (>=3.1.0,<4.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "uvicorn (>=0.11.5,<0.12.0)", "graphene (>=2.1.8,<3.0.0)"]
-doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=6.1.4,<7.0.0)", "markdown-include (>=0.5.1,<0.6.0)", "mkdocs-markdownextradata-plugin (>=0.1.7,<0.2.0)", "typer (>=0.3.0,<0.4.0)", "typer-cli (>=0.0.9,<0.0.10)", "pyyaml (>=5.3.1,<6.0.0)"]
-test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<0.15.0)", "mypy (==0.782)", "flake8 (>=3.8.3,<4.0.0)", "black (==19.10b0)", "isort (>=5.0.6,<6.0.0)", "requests (>=2.24.0,<3.0.0)", "httpx (>=0.14.0,<0.15.0)", "email_validator (>=1.1.1,<2.0.0)", "sqlalchemy (>=1.3.18,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "databases[sqlite] (>=0.3.2,<0.4.0)", "orjson (>=3.2.1,<4.0.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "aiofiles (>=0.5.0,<0.6.0)", "flask (>=1.1.2,<2.0.0)"]
+all = ["requests (>=2.24.0,<3.0.0)", "aiofiles (>=0.5.0,<0.6.0)", "jinja2 (>=2.11.2,<3.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "itsdangerous (>=1.1.0,<2.0.0)", "pyyaml (>=5.3.1,<6.0.0)", "graphene (>=2.1.8,<3.0.0)", "ujson (>=3.0.0,<4.0.0)", "orjson (>=3.2.1,<4.0.0)", "email_validator (>=1.1.1,<2.0.0)", "uvicorn[standard] (>=0.12.0,<0.14.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)"]
+dev = ["python-jose[cryptography] (>=3.1.0,<4.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "uvicorn[standard] (>=0.12.0,<0.14.0)", "graphene (>=2.1.8,<3.0.0)"]
+doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=6.1.4,<7.0.0)", "markdown-include (>=0.5.1,<0.6.0)", "mkdocs-markdownextradata-plugin (>=0.1.7,<0.2.0)", "typer-cli (>=0.0.9,<0.0.10)", "pyyaml (>=5.3.1,<6.0.0)"]
+test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<0.15.0)", "mypy (==0.790)", "flake8 (>=3.8.3,<4.0.0)", "black (==20.8b1)", "isort (>=5.0.6,<6.0.0)", "requests (>=2.24.0,<3.0.0)", "httpx (>=0.14.0,<0.15.0)", "email_validator (>=1.1.1,<2.0.0)", "sqlalchemy (>=1.3.18,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "databases[sqlite] (>=0.3.2,<0.4.0)", "orjson (>=3.2.1,<4.0.0)", "async_exit_stack (>=1.0.1,<2.0.0)", "async_generator (>=1.10,<2.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "aiofiles (>=0.5.0,<0.6.0)", "flask (>=1.1.2,<2.0.0)"]
 
 [[package]]
 name = "h11"
@@ -628,6 +628,14 @@ python-versions = "*"
 botocore = ">=1.12.36,<2.0a.0"
 
 [[package]]
+name = "selectolax"
+version = "0.2.10"
+description = "Fast HTML5 parser with CSS selectors."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "sentry-sdk"
 version = "0.19.5"
 description = "Python client for Sentry (https://sentry.io)"
@@ -736,7 +744,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.13.1"
+version = "0.13.2"
 description = "The lightning-fast ASGI server."
 category = "main"
 optional = false
@@ -819,7 +827,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.6"
-content-hash = "a1761bd558527e15ae7e5eb6cd21e36c707b763bd2e9f2744e9d834cb0e520cf"
+content-hash = "d481bc52936094ed89739d6f46d03eb314470ff1e9940b7cb2d768685a8789c9"
 
 [metadata.files]
 aerich = [
@@ -984,8 +992,8 @@ docutils = [
     {file = "docutils-0.15.2.tar.gz", hash = "sha256:a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"},
 ]
 fastapi = [
-    {file = "fastapi-0.62.0-py3-none-any.whl", hash = "sha256:62074dd38541d9d7245f3aacbbd0d44340c53d56186c9b249d261a18dad4874b"},
-    {file = "fastapi-0.62.0.tar.gz", hash = "sha256:8f4c64cd9cea67fb7dd175ca5015961efa572b9f43a8731014dac8929d86225f"},
+    {file = "fastapi-0.63.0-py3-none-any.whl", hash = "sha256:98d8ea9591d8512fdadf255d2a8fa56515cdd8624dca4af369da73727409508e"},
+    {file = "fastapi-0.63.0.tar.gz", hash = "sha256:63c4592f5ef3edf30afa9a44fa7c6b7ccb20e0d3f68cd9eba07b44d552058dcb"},
 ]
 h11 = [
     {file = "h11-0.11.0-py2.py3-none-any.whl", hash = "sha256:ab6c335e1b6ef34b205d5ca3e228c9299cc7218b049819ec84a388c2525e5d87"},
@@ -1197,6 +1205,52 @@ s3transfer = [
     {file = "s3transfer-0.3.3-py2.py3-none-any.whl", hash = "sha256:2482b4259524933a022d59da830f51bd746db62f047d6eb213f2f8855dcb8a13"},
     {file = "s3transfer-0.3.3.tar.gz", hash = "sha256:921a37e2aefc64145e7b73d50c71bb4f26f46e4c9f414dc648c6245ff92cf7db"},
 ]
+selectolax = [
+    {file = "selectolax-0.2.10-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:a18f75af342476356e5a437fc5215a3b79b58f52b56d9ea6e1a985cc21895952"},
+    {file = "selectolax-0.2.10-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:ecdbad6c95b93256df4c3cb14612215bcd754093415615c55a191bb17fd0ebdc"},
+    {file = "selectolax-0.2.10-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:a36581e0a4f74c5a67d22048fbf34221f9d480bde05acc57702b1cffdcb9ecf5"},
+    {file = "selectolax-0.2.10-cp35-cp35m-manylinux2010_i686.whl", hash = "sha256:519335c313c49151e0a282bef88043eab8756732f24eeb42d2a17e68b3ab174e"},
+    {file = "selectolax-0.2.10-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:bba6127957c3209e141e42077d952cb1df4a5dc23c522ca9038c8013509588d8"},
+    {file = "selectolax-0.2.10-cp35-cp35m-win32.whl", hash = "sha256:37cb0fd1d933ad7321caa68773fda490d686286eaf4d77922686ad14506c4a2c"},
+    {file = "selectolax-0.2.10-cp35-cp35m-win_amd64.whl", hash = "sha256:8b85a1356e180d235d9ab92bc3dd90d07e78cab1ef324ae9d12207607c9f26f6"},
+    {file = "selectolax-0.2.10-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:f8f8488fa5859b0da7e4a1bd265b5c0bba45dbf8286e6cee17bf95bcb3d5e797"},
+    {file = "selectolax-0.2.10-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:4233599d6507e11a6fab67d9e933d8f445859868b4162eb71c849a832935b575"},
+    {file = "selectolax-0.2.10-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:8d8e3c7c43805628f2112cda81dba0b8f6620912c24ab2d6635f351985097971"},
+    {file = "selectolax-0.2.10-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:4ebb88d954dabffa3bafad6cdd758612a7d3b84ceee692c5818bbf0fa93c5f6b"},
+    {file = "selectolax-0.2.10-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:e6857ac61acbf747ea56f6c8a72968e7a6ba88053a9a2b5b44091bfb97fb1c87"},
+    {file = "selectolax-0.2.10-cp36-cp36m-win32.whl", hash = "sha256:a6724cb313cd7805c7cf4252fdf162e7253cf3a933b7c25ac954feed3edc23ce"},
+    {file = "selectolax-0.2.10-cp36-cp36m-win_amd64.whl", hash = "sha256:38661265f318459cd93b1a87b20d8b7b5adeaa353cc96e2d5087a05eef9ce8a3"},
+    {file = "selectolax-0.2.10-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:f22653fd48a7f835891bab16095c6f983994d68d16925447e537eb6e3ab79fc4"},
+    {file = "selectolax-0.2.10-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:f83648e412aa610bdff1259dc412383fb290427c05f54e4fad1419b16aca19fe"},
+    {file = "selectolax-0.2.10-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:804f8e954428a1a325a62a88af39e1fef87c22f0689ee3c3a1d8968ee9648f6e"},
+    {file = "selectolax-0.2.10-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:13e6a6ec4b8fc43ef3f6586e17ba85832bbcdf8074d9a31a159d87dd81bf2627"},
+    {file = "selectolax-0.2.10-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:df57fdbbf772b72993e44cdb326b4937d225e0dd2083cce56100593fe791326a"},
+    {file = "selectolax-0.2.10-cp37-cp37m-win32.whl", hash = "sha256:f6c637636cc3bd0025dc9bd07fde28d482c93a6c21cf2e88b827a06766b2b314"},
+    {file = "selectolax-0.2.10-cp37-cp37m-win_amd64.whl", hash = "sha256:4b9f60a689c0453b6e2a6b92dd2407c82167f3d7624b27184842b2b58d5bc353"},
+    {file = "selectolax-0.2.10-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:c49ac91cb291eae5c396aa87725ad066ba2fd9690289f3ffcde0022e4276b56e"},
+    {file = "selectolax-0.2.10-cp38-cp38-manylinux1_i686.whl", hash = "sha256:b8632b165d5da9ecbfb671dbfa879a874cd63d2ea66a8d21b065da1236949947"},
+    {file = "selectolax-0.2.10-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:60ba2ce5060bac7d56dedefe1403602aac1b999a60596294ce3a9520e2c95d71"},
+    {file = "selectolax-0.2.10-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:ec2e3f6e49ee252c2fd0c0f297513150ec04e59c7aa0236baebeaaf21b83ffef"},
+    {file = "selectolax-0.2.10-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:231ce804a5e186afa4e7f1639f3a2fdefc5151c1094746fa09821c7c9f5dbeb6"},
+    {file = "selectolax-0.2.10-cp38-cp38-win32.whl", hash = "sha256:d4144619f88bb94ee2c29cccc23b00a020d6d140d84eda8d7fc4da05dc15f352"},
+    {file = "selectolax-0.2.10-cp38-cp38-win_amd64.whl", hash = "sha256:4714c5e6b18ad0ca9f2919b39f333590025e46cb0bb248ffe973333bbf18a491"},
+    {file = "selectolax-0.2.10-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:6f7f7a1a030c5612529c0e9df46d690b54d22416d500095ddf3985527f8fb78f"},
+    {file = "selectolax-0.2.10-cp39-cp39-manylinux1_i686.whl", hash = "sha256:90da202496bb99a0924cd26c471f455f64308ed13a24500852635aef5014a43f"},
+    {file = "selectolax-0.2.10-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:e577ea359151e4df515eabc0c6ea1ddda0577971597c5e9908498a80477befc6"},
+    {file = "selectolax-0.2.10-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:4208bfab7c5e14d54104b7959ba1d66f67a51044cb1fccbab62d12c6bd905f02"},
+    {file = "selectolax-0.2.10-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:88cc811bb3f9c4eac303dde5ba3ecde0972dba8cebf2fb8001467e752c888838"},
+    {file = "selectolax-0.2.10-cp39-cp39-win32.whl", hash = "sha256:290b9bc9df879c8538899b5d22e8fa272e07c9edc438396d9b9ad631a7689837"},
+    {file = "selectolax-0.2.10-cp39-cp39-win_amd64.whl", hash = "sha256:2fe935472e9c2c14caf38b65a5ea836f0c3d56081945a8588e14f4136e34ba6b"},
+    {file = "selectolax-0.2.10-pp36-pypy36_pp73-macosx_10_9_x86_64.whl", hash = "sha256:03e4c0b6d8feb16472482c89a1bf0752335d015172263388c94b8089224ed9e6"},
+    {file = "selectolax-0.2.10-pp36-pypy36_pp73-manylinux1_x86_64.whl", hash = "sha256:5e2fb6a27bc7760d57f8cc53adcf5b300a021a3f4102df0e5dd8abb436041c28"},
+    {file = "selectolax-0.2.10-pp36-pypy36_pp73-manylinux2010_x86_64.whl", hash = "sha256:274d70e46a94a7b673585957574e571b1838afb5862b9edc7477f704a2e8be3f"},
+    {file = "selectolax-0.2.10-pp36-pypy36_pp73-win32.whl", hash = "sha256:01b26820667dcd8dc0ec94ed874ffc8e45043f0da70466544a9328a79282ff41"},
+    {file = "selectolax-0.2.10-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:108f0ed757c5e74cd3d15f3ddb615c891711ae9647fb002aca6dbad5c7f0084c"},
+    {file = "selectolax-0.2.10-pp37-pypy37_pp73-manylinux1_x86_64.whl", hash = "sha256:98e8b60fca5ca6e2f0a2a1882f0c1b771612e5016bd6605545e7c20a8baac244"},
+    {file = "selectolax-0.2.10-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:061efe18e01a624e33317d1f98f20d67f025e228f5cf87f198caceadff9e77f5"},
+    {file = "selectolax-0.2.10-pp37-pypy37_pp73-win32.whl", hash = "sha256:c47c7602e8cf8bdce03716b0240d2067eec92f3185cffe34813c60706559ae6a"},
+    {file = "selectolax-0.2.10.tar.gz", hash = "sha256:3b21ba8862be4445482e6954c61562851cebd9c9e5db73b0865ea4729e7c85b0"},
+]
 sentry-sdk = [
     {file = "sentry-sdk-0.19.5.tar.gz", hash = "sha256:737a094e49a529dd0fdcaafa9e97cf7c3d5eb964bd229821d640bc77f3502b3f"},
     {file = "sentry_sdk-0.19.5-py2.py3-none-any.whl", hash = "sha256:0a711ec952441c2ec89b8f5d226c33bc697914f46e876b44a4edd3e7864cf4d0"},
@@ -1231,8 +1285,8 @@ urllib3 = [
     {file = "urllib3-1.25.11.tar.gz", hash = "sha256:8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.13.1-py3-none-any.whl", hash = "sha256:6fcce74c00b77d4f4b3ed7ba1b2a370d27133bfdb46f835b7a76dfe0a8c110ae"},
-    {file = "uvicorn-0.13.1.tar.gz", hash = "sha256:2a7b17f4d9848d6557ccc2274a5f7c97f1daf037d130a0c6918f67cd9bc8cdf5"},
+    {file = "uvicorn-0.13.2-py3-none-any.whl", hash = "sha256:6707fa7f4dbd86fd6982a2d4ecdaad2704e4514d23a1e4278104311288b04691"},
+    {file = "uvicorn-0.13.2.tar.gz", hash = "sha256:d19ca083bebd212843e01f689900e5c637a292c63bb336c7f0735a99300a5f38"},
 ]
 uvloop = [
     {file = "uvloop-0.14.0-cp35-cp35m-macosx_10_11_x86_64.whl", hash = "sha256:08b109f0213af392150e2fe6f81d33261bb5ce968a288eb698aad4f46eb711bd"},

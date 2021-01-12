@@ -41,6 +41,8 @@ class Settings(BaseSettings):
 
     AWS_ACCESS_KEY_ID: str
     AWS_SECRET_ACCESS_KEY: str
+    AWS_S3_ENDPOINT_URL: HttpUrl
+    AWS_S3_REGION_NAME: str
 
     CHROMIUM_PATH: str
 

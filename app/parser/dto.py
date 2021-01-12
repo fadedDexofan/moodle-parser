@@ -8,6 +8,7 @@ class CompletionStatus(str, Enum):
     CORRECT = 'CORRECT'
     PARTIALLY_CORRECT = 'PARTIALLY_CORRECT'
     INCORRECT = 'INCORRECT'
+    NOT_ANSWERED = 'NOT_ANSWERED'
 
 
 class QuestionDTO(BaseModel):

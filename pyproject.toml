@@ -8,9 +8,9 @@ authors = ["Daniil Kharkov <fadeddexofan@gmail.com>"]
 python = "^3.8.6"
 httpx = "^0.16.1"
 pydantic = "^1.7.3"
-fastapi = "^0.62.0"
+fastapi = "^0.63.0"
 starlette = "^0.13.6"
-uvicorn = { version = "^0.13.1", extras = ["standard"] }
+uvicorn = { version = "^0.13.2", extras = ["standard"] }
 aio-pika = "^6.7.1"
 tortoise-orm = "^0.16.18"
 uvloop = "^0.14.0"
@@ -22,6 +22,7 @@ pyppeteer = "^0.2.2"
 celery = { version = "*", extras = ["redis"] }
 aioboto3 = "^8.2.0"
 aioredis = "*"
+selectolax = "^0.2.10"
 
 [tool.poetry.dev-dependencies]
 
